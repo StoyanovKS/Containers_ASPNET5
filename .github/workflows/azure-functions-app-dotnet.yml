@@ -18,8 +18,8 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
-      - name: Publish
-        run: dotnet publish -c Release -o myapp
+      - name: Publish app
+        run: dotnet publish SeminarHub/SeminarHub.csproj -c Release -o myapp
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
